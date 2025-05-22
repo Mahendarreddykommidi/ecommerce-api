@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Productsdisplay = ({ product }) => {
-  const { products } = useContext(ShopContext);
+  const { products,addToCart } = useContext(ShopContext);
 
   return (
     <div>
@@ -24,7 +24,7 @@ const Productsdisplay = ({ product }) => {
               <p className="text-2xl font-medium text-gray-700">{product.title}</p>
               <p className="w-full">{product.description}</p>
               <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-                <button className="bg-blue-500 px-6 py-2 text-white rounded-lg w-full sm:w-auto">
+                <button onClick={()=>addToCart(product.id)} className="bg-blue-500 px-6 py-2 text-white rounded-lg w-full sm:w-auto">
                   Addtocart
                 </button>
                
