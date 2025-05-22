@@ -9,9 +9,9 @@ const Featuredproducts = () => {
   return (
     <div>
      <div>
-       <h2 className='font-bold tect-lg md:text-xl lg:2xl text-center'>Featured products</h2>
+       <h2 className='font-bold tect-lg md:text-xl lg:2xl text-center my-10'>Featured products</h2>
      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:mx-30 w-auto  gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:mx-30 w-auto  gap-5">
               {products.slice(0,5).map((item) => (
                 <div key={item.id} id={item.id} className="flex items-center justify-between">
                   <Productitem
